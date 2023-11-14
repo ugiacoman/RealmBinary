@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "Realm",
-            targets: ["Realm"]),
+            targets: ["Realm", "_RealmStub"]),
         .library(
             name: "RealmSwift",
             targets: ["RealmSwift", "Realm"])
@@ -24,6 +24,7 @@ let package = Package(
       name: "RealmSwift",
       url: "https://github.com/realm/realm-swift/releases/download/v10.43.1/RealmSwift@15.0.spm.zip",
       checksum: "3bfeb55fa6603e4ff6bddc764e32abf6bcf87a885abc1ef44785a4f45fbddc22"
-    )
+    ),
+    .target(name: "_RealmStub"),
     ]
 )
