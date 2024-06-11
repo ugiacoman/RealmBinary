@@ -15,7 +15,7 @@ let package = Package(
     targets: [
       .binaryTarget(
         name: "RealmSwift",
-        path: "./Sources/realm-monorepo.xcframework"
+        path: "./Sources/RealmSwift.xcframework"
       ),
     ]
 )
