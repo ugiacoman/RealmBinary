@@ -24,8 +24,8 @@ let package = Package(
       ),
       .binaryTarget(
         name: "RealmSwift",
-        url: "https://github.com/realm/realm-swift/releases/download/v20.0.0/RealmSwift@16.1_beta.spm.zip",
-        checksum: "18d24f979db99743010f8c774c6cefe996a075b334a4dbe1a930a6bc876b12aa"
+        url: "https://github.com/realm/realm-swift/releases/download/v20.0.0/RealmSwift@16_beta_6.spm.zip",
+        checksum: "a6e83219ddefd9731aaf39c6a59589cfa998665abdd241398c59c7ae83332253"
       ),
       .target(name: "_RealmStub"),
     ]
