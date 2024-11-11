@@ -1,11 +1,8 @@
 # RealmBinary
 
-## ⚠️ WARNING Check Carthage compatability in Realm [release versions](https://github.com/realm/realm-swift/releases)
+This module vends the Realm binary for use in other modules. To re-generate the binary
 
-This repository is a direct solution to [this issue](https://github.com/realm/realm-swift/issues/6898)
-
-It has an action which runs every 2 hours to check if Realm has new releases. Based on similar [solution](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks) for firebase
-
-Possible issues:
-- If Realm deletes Carthage.framework.zip from release Assets this script will no longer work.
-- Any critical changes (like moving Realm or RealmSwift folders to different locations) to Realm repository will break the script
+1. Download the latest version of the Realm binary from the [Realm website](https://realm.io/docs/get-started/installation/mac/). You are looking for Realm.spm.zip and RealmSwift@x.x.x.spm zip.
+2. Open up Package.swift and update links.
+3. Get the checksum of the new binaries: `swift package compute-checksum RealmSwift@x.x.spm.zip`
+4. Check Realm and RealmSwift header files and modulemaps to see if there are changes. If there are, just replace with the latest files.
